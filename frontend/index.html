@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trend Corner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Trend Corner</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div id="product-list">
+                <!-- Products dynamically loaded -->
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button id="checkout-button">Checkout</button>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <div id="blog-posts">
+                <!-- Blog posts dynamically loaded -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 The Trend Corner</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+<h2>Your Cart</h2>
+<div id="cart-list">
+    <p>Your cart is empty!</p>
+</div>
+<h3 id="cart-total">Total: $0</h3>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<button id="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+<input type="text" id="search-box" placeholder="Search products" oninput="searchProducts()">
